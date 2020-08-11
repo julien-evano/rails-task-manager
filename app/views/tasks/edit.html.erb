@@ -1,0 +1,26 @@
+<h1>Edit task</h1>
+
+<div class="form">
+  <%= form_for(@task) do |f| %>
+    <div class="form-item">
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title %>
+      <br>
+    </div>
+
+    <div class="form-item">
+      <%= f.label :details %>
+      <br>
+      <%= f.text_field :details %>
+      <br>
+    </div>
+
+    <div class="checkbox">
+      <%= f.check_box :completed %>
+      <%= f.label :completed %>
+    </div>
+    <br><br>
+    <%= f.submit 'Edit task', :class => 'btn' %>
+  <% end %>
+</div>
